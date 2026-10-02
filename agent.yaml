@@ -1,0 +1,30 @@
+spec_version: "0.1.0"
+name: trademark-infringement-agent
+version: 1.0.0
+description: Trademark text and phonetics similarity scoring, nice classification checking, and likelihood of confusion evaluation.
+author: "Rucha Salpure"
+license: MIT
+model:
+  preferred: claude-opus-4-6
+  fallback:
+    - claude-sonnet-4-5-20250929
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+skills:
+  - dupont-factors-scoring
+tools: []
+delegation:
+  mode: auto
+runtime:
+  max_turns: 50
+  timeout: 300
+compliance:
+  risk_tier: standard
+  frameworks: []
+tags:
+  - legal
+  - autonomous-agent
+  - opengap-verified
+metadata:
+  repository: "https://github.com/Rucha0901/trademark-infringement-agent"
